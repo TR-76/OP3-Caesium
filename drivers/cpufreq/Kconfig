@@ -132,6 +132,13 @@ config CPU_FREQ_DEFAULT_GOV_ALUCARD
           It has been known to be battery friendly without sacrificing much performance. If unsure have a look at the help section of the
 driver. Fallback governor will be the performance governor.
 
+config CPU_FREQ_DEFAULT_GOV_DARKNESS
+	bool "darkness"
+	select CPU_FREQ_GOV_DARKNESS
+	help
+	  It's based on nightmare but more simple and fast, basic configs but very complex structure.
+	  It is an updated nightmare gov and improved stability, so far it is quite stable in tests.
+
 endchoice
 
 config CPU_FREQ_GOV_PERFORMANCE
@@ -248,6 +255,11 @@ config CPU_FREQ_GOV_ALUCARD
 	  For details, take a look at linux/Documentation/cpu-freq.
 
 If in doubt, say N.
+
+config CPU_FREQ_GOV_DARKNESS
+	tristate "'darkness' cpufreq governor"
+	depends on CPU_FREQ
+	select CPU_FREQ_GOV_COMMON
 
 config CPUFREQ_DT
 	tristate "Generic DT based cpufreq driver"
