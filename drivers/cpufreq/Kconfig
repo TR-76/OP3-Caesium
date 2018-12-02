@@ -130,7 +130,7 @@ config CPU_FREQ_DEFAULT_GOV_ALUCARD
 	  Use the CPUFreq governor 'alucard' as default. A favourite choice and one of the original governors that Alucard_24 made.
           Alucard is based on ondemand but has been heavily tweaked to bring better battery life and performance.
           It has been known to be battery friendly without sacrificing much performance. If unsure have a look at the help section of the
-driver. Fallback governor will be the performance governor.
+          driver. Fallback governor will be the performance governor.
 
 config CPU_FREQ_DEFAULT_GOV_DARKNESS
 	bool "darkness"
@@ -259,8 +259,6 @@ config CPU_FREQ_GOV_ALUCARD
 	  module will be called cpufreq_alucard.
 
 	  For details, take a look at linux/Documentation/cpu-freq.
-
-If in doubt, say N.
 
 config CPU_FREQ_GOV_DARKNESS
 	tristate "'darkness' cpufreq governor"
